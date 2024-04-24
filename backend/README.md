@@ -99,8 +99,8 @@ These steps assume you've already followed the steps above for setting up your d
         - `sudo apt install s3fs`
     1. Setup a s3fs mounted folder
         - Create the mounted folder locally `mkdir ~/mounted_folder`
-        - `s3fs llama-app-web-assets-preview ~/mounted_folder`
-            - You can replace `llama-app-web-assets-preview` with the name of the S3 bucket you want to upload the files to.
+        - `s3fs pi-app-web-assets-preview ~/mounted_folder`
+            - You can replace `pi-app-web-assets-preview` with the name of the S3 bucket you want to upload the files to.
 1. Install [`wkhtmltopdf`](https://wkhtmltopdf.org/)
     - This step can be skipped if you're running from the devcontainer image in Github Codespaces
     - Steps:
@@ -125,7 +125,7 @@ This is useful for times when:
 1. You want to setup a local environment with your local Postgres DB to have a set of documents in the `documents` table
     * When running locally, this will use [`localstack`](https://localstack.cloud/) to store the documents into a local S3 bucket instead of a real one.
 1. You want to update the documents present in either Prod or Preview DBs
-    * In fact, this is the very script that is run by the [`llama-app-cron` cron job service](https://github.com/run-llama/sec-insights/blob/294d8e5/render.yaml#L38) that gets setup by the `render.yaml` blueprint when deploying this service to Render.com.
+    * In fact, this is the very script that is run by the [`pi-app-cron` cron job service](https://github.com/run-llama/sec-insights/blob/294d8e5/render.yaml#L38) that gets setup by the `render.yaml` blueprint when deploying this service to Render.com.
 
 ### Usage
 To run the script, make sure you've:

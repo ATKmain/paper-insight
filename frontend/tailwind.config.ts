@@ -42,7 +42,7 @@ export default {
         "llama-indigo": "#817AF2",
       },
       backgroundImage: (theme) => ({
-        gradient: "url('https://llama-app-frontend.vercel.app/Gradient.png')",
+        gradient: "url('https://pi-app-frontend.vercel.app/Gradient.png')",
       }),
       backgroundSize: {
         "100%": "100%",
