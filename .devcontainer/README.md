@@ -1,4 +1,4 @@
-# SEC Insights Dev Container
+# Paper Insights Dev Container
 
 This dev container configuration sets up a development environment that is specifically configured for this project.
 
@@ -8,7 +8,7 @@ This is useful in getting the project setup faster by having many of the system 
 
 You can either click this button to open the dev container on a Github Codespace:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/run-llama/sec-insights)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ATKmain/paper-insights)
 
 Or you can spin up the dev container locally using [VS Code's dev container feature](https://code.visualstudio.com/docs/devcontainers/create-dev-container#_create-a-devcontainerjson-file).
 

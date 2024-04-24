@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-APACHE2.0-yellow.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 Paper Insights uses the Retrieval Augmented Generation (RAG) capabilities of [LlamaIndex](https://github.com/jerryjliu/llama_index) to answer questions about Papers documents.
-This project created based on [SEC Insigt](https://github.com/run-llama/sec-insights)
+This project created based on [SEC Insigt](https://github.com/ATKmain/paper-insights)
 
 You can also check out SES insight [End-to-End tutorial guide on YouTube](https://youtu.be/2O52Tfj79T4?si=CYUcaBkc9P9g_m0P) for similar project! This video covers product features, system architecture, development environment setup, and how to use this application with your own custom documents *(beyond just Paper filings!)*. The video has chapters so you can skip to the papertion most relevant to you.
 

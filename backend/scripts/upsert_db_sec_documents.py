@@ -55,7 +55,7 @@ async def upsert_document(doc_dir: str, stock: Stock, filing: Filing, url_base: 
 
 async def async_upsert_documents_from_filings(url_base: str, doc_dir: str):
     """
-    Upserts SEC documents into the database based on what has been downloaded to the filesystem.
+    Upserts paperdocuments into the database based on what has been downloaded to the filesystem.
     """
     filings = get_available_filings(doc_dir)
     stocks_data = PyTickerSymbols()
@@ -72,7 +72,7 @@ def main_upsert_documents_from_filings(
     url_base: str = DEFAULT_URL_BASE, doc_dir: str = DEFAULT_DOC_DIR
 ):
     """
-    Upserts SEC documents into the database based on what has been downloaded to the filesystem.
+    Upserts paperdocuments into the database based on what has been downloaded to the filesystem.
     """
 
     asyncio.run(async_upsert_documents_from_filings(url_base, doc_dir))

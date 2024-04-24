@@ -363,7 +363,7 @@ export const RenderConversations: React.FC<IRenderConversation> = ({
               <HiOutlineChatAlt2 size={40} />
             </div>
             <div className="mb-2 w-3/4 text-center text-lg font-bold">
-              Ask SEC Insights questions about the documents you&apos;ve
+              Ask Paper Insights questions about the documents you&apos;ve
               selected, such as:
             </div>
             <div className="m-auto flex w-full flex-wrap justify-center">

@@ -31,17 +31,17 @@ async def async_seed_db(
     ciks: List[str] = DEFAULT_CIKS, filing_types: List[str] = DEFAULT_FILING_TYPES
 ):
     with TemporaryDirectory() as temp_dir:
-        print("Downloading SEC filings")
+        print("Downloading paper set")
         download_sec_pdf.main(
             output_dir=temp_dir,
             ciks=ciks,
             file_types=filing_types,
         )
 
-        print("Copying downloaded SEC filings to S3")
+        print("Copying downloaded paper set to S3")
         copy_to_s3(str(Path(temp_dir) / "sec-edgar-filings"))
 
-        print("Upserting records of downloaded SEC filings into database")
+        print("Upserting records of downloaded paper set into database")
         await upsert_db_sec_documents.async_upsert_documents_from_filings(
             url_base=settings.CDN_BASE_URL,
             doc_dir=temp_dir,

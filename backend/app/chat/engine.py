@@ -106,7 +106,7 @@ def build_description_for_document(document: DocumentSchema) -> str:
             if sec_metadata.quarter
             else str(sec_metadata.year)
         )
-        return f"A SEC {sec_metadata.doc_type.value} filing describing the financials of {sec_metadata.company_name} ({sec_metadata.company_ticker}) for the {time_period} time period."
+        return f"A Paper {sec_metadata.doc_type.value} filing describing the financials of {sec_metadata.company_name} ({sec_metadata.company_ticker}) for the {time_period} time period."
     return "A document containing useful information that the user pre-selected to discuss with the assistant."
 
 
@@ -295,7 +295,7 @@ async def get_chat_engine(
             metadata=ToolMetadata(
                 name="qualitative_question_engine",
                 description="""
-A query engine that can answer qualitative questions about a set of SEC financial documents that the user pre-selected for the conversation.
+A query engine that can answer qualitative questions about a set of papers that the user pre-selected for the conversation.
 Any questions about company-related headwinds, tailwinds, risks, sentiments, or administrative information should be asked here.
 """.strip(),
             ),
@@ -305,7 +305,7 @@ Any questions about company-related headwinds, tailwinds, risks, sentiments, or 
             metadata=ToolMetadata(
                 name="quantitative_question_engine",
                 description="""
-A query engine that can answer quantitative questions about a set of SEC financial documents that the user pre-selected for the conversation.
+A query engine that can answer quantitative questions about a set of papers that the user pre-selected for the conversation.
 Any questions about company-related financials or other metrics should be asked here.
 """.strip(),
             ),

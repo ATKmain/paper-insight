@@ -21,7 +21,7 @@ export const MarketingSection = () => {
       <div className="mb-24 mt-24 flex h-max min-h-[200px] w-full items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <div className="font-bold text-llama-indigo">
-            SEC Insights presents
+            Paper Insights presents
           </div>
           <div className="w-3/4 text-center font-lora text-4xl font-bold">
             The next step in analyzing complex financial documents
@@ -67,7 +67,7 @@ export const MarketingSection = () => {
             algorithm
           </div>
           <div className="sm:3/5 mx-auto mt-3 w-4/5 font-lora text-xl sm:mx-0">
-            SEC Insights does more than give you the answer. It helps you
+            Paper Insights does more than give you the answer. It helps you
             understand how that answer was generated in the first place.
           </div>
         </div>
