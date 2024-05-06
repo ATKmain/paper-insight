@@ -2,7 +2,7 @@
 
 Here we will go over a list of commonly asked questions and/or concerns regarding this project. You may run into some of these questions yourself when reviewing the project!
 
-## How do I add more SEC documents beyond the selected set?
+## How do I add more paper?
 You can do this by using our [seed script](https://github.com/ATKmain/paper-insights/tree/main/backend#seed-db-script-)!
 
 
@@ -11,9 +11,6 @@ Just make sure you follow the setup instructions as a pre-requisite to running t
 ## How do I use different types of documents besides paper set? e.g. Research papers, internal documents, etc.
 This can be done!
 
-While our frontend is fairly specific to the SEC filing use-case, our backend is setup to be very flexible in terms of the types of documents you can ingest and start asking questions about.
-
-An in-depth walkthrough on doing this can be found in [our YouTube tutorial](https://youtu.be/2O52Tfj79T4?si=kiRxB2dLES0Gaad7&t=1311).
 
 Here are some high level steps:
 1. Insert the PDF document into your database by using the script in `scripts/upsert_document.py`

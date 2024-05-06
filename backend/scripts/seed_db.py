@@ -5,7 +5,7 @@ from pathlib import Path
 from fire import Fire
 import s3fs
 from app.core.config import settings
-import upsert_db_sec_documents
+import upsert_db_paper_documents
 import download_sec_pdf
 from download_sec_pdf import DEFAULT_CIKS, DEFAULT_FILING_TYPES
 import seed_storage_context
@@ -42,7 +42,7 @@ async def async_seed_db(
         copy_to_s3(str(Path(temp_dir) / "sec-edgar-filings"))
 
         print("Upserting records of downloaded paper set into database")
-        await upsert_db_sec_documents.async_upsert_documents_from_filings(
+        await upsert_db_paper_documents.async_upsert_documents_from_filings(
             url_base=settings.CDN_BASE_URL,
             doc_dir=temp_dir,
         )

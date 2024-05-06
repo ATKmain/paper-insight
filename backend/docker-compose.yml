@@ -18,13 +18,13 @@ services:
       BACKEND_CORS_ORIGINS: '["http://localhost", "http://localhost:8000"]'
 
   db:
-    image: ankane/pgvector:v0.5.0
+    image: ankane/pgvector:v0.5.1
     environment:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: password
       POSTGRES_DB: llama_app_db
     ports:
-      - "127.0.0.1:5432:5432"
+      - "127.0.0.1:5434:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
 

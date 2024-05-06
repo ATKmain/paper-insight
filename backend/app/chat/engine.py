@@ -41,7 +41,7 @@ from app.schema import (
     Document as DocumentSchema,
     Conversation as ConversationSchema,
     DocumentMetadataKeysEnum,
-    SecDocumentMetadata,
+    PaperDocumentMetadata,
 )
 from app.models.db import MessageRoleEnum, MessageStatusEnum
 from app.chat.constants import (
@@ -97,16 +97,12 @@ def fetch_and_read_document(
 
 
 def build_description_for_document(document: DocumentSchema) -> str:
-    if DocumentMetadataKeysEnum.SEC_DOCUMENT in document.metadata_map:
-        sec_metadata = SecDocumentMetadata.parse_obj(
-            document.metadata_map[DocumentMetadataKeysEnum.SEC_DOCUMENT]
+    if DocumentMetadataKeysEnum.PAPER_DOCUMENT in document.metadata_map:
+        paper_metadata = PaperDocumentMetadata.parse_obj(
+            document.metadata_map[DocumentMetadataKeysEnum.PAPER_DOCUMENT]
         )
-        time_period = (
-            f"{sec_metadata.year} Q{sec_metadata.quarter}"
-            if sec_metadata.quarter
-            else str(sec_metadata.year)
-        )
-        return f"A Paper {sec_metadata.doc_type.value} filing describing the financials of {sec_metadata.company_name} ({sec_metadata.company_ticker}) for the {time_period} time period."
+        
+        return f"A Paper {paper_metadata.name} by {paper_metadata.authors_abrv} in {paper_metadata.year}."
     return "A document containing useful information that the user pre-selected to discuss with the assistant."
 
 
@@ -278,7 +274,7 @@ async def get_chat_engine(
     api_query_engine_tools = [
         get_api_query_engine_tool(doc, service_context)
         for doc in conversation.documents
-        if DocumentMetadataKeysEnum.SEC_DOCUMENT in doc.metadata_map
+        if DocumentMetadataKeysEnum.PAPER_DOCUMENT in doc.metadata_map
     ]
 
     quantitative_question_engine = SubQuestionQueryEngine.from_defaults(

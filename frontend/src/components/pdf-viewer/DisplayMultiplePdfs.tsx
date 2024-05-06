@@ -1,11 +1,11 @@
 import { ViewPdf } from "~/components/pdf-viewer/ViewPdf";
 import { useMultiplePdfs } from "../../hooks/useMultiplePdfs";
-import { SecDocument } from "~/types/document";
+import { PaperDocument } from "~/types/document";
 import cx from "classnames";
 import { borderColors } from "~/utils/colors";
 
 interface DisplayMultiplePdfsProps {
-  pdfs: SecDocument[];
+  pdfs: PaperDocument[];
 }
 
 export const DisplayMultiplePdfs: React.FC<DisplayMultiplePdfsProps> = ({

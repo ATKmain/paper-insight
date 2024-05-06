@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { usePdfFocus } from "~/context/pdf";
-import { SecDocument } from "~/types/document";
+import { PaperDocument } from "~/types/document";
 
-export const useMultiplePdfs = (pdfs: SecDocument[]) => {
+export const useMultiplePdfs = (pdfs: PaperDocument[]) => {
   const [activePdfUrl, setActivePdfUrl] = useState<string>("");
   const { pdfFocusState } = usePdfFocus();
 
@@ -23,11 +23,11 @@ export const useMultiplePdfs = (pdfs: SecDocument[]) => {
     }
   }, [pdfFocusState.pageNumber, pdfFocusState.documentId, setActivePdfUrl]);
 
-  const isActivePdf = (file: SecDocument) => {
+  const isActivePdf = (file: PaperDocument) => {
     return file.url == activePdfUrl;
   };
 
-  const handlePdfFocus = (file: SecDocument) => {
+  const handlePdfFocus = (file: PaperDocument) => {
     setActivePdfUrl(file.url);
   };
 

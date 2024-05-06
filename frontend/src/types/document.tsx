@@ -10,11 +10,10 @@ export type Ticker = {
   fullName: string;
 };
 
-export interface SecDocument extends Ticker {
+export interface PaperDocument extends Ticker {
   id: string;
   url: string;
+  title: string;
   year: string;
-  docType: DocumentType;
-  quarter?: string;
   color: DocumentColorEnum;
 }

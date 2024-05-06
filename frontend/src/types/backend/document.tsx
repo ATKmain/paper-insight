@@ -12,13 +12,9 @@ export interface BackendDocument {
 }
 
 export interface BackendMetadataMap {
-  sec_document: BackendSecDocument;
+  paper_document: BackendPaperDocument;
 }
 
-export interface BackendSecDocument {
-  company_name: string;
-  company_ticker: string;
-  doc_type: BackendDocumentType;
-  year: number;
-  quarter: number;
+export interface BackendPaperDocument {
+  full_name: string;
 }
