@@ -24,7 +24,7 @@ export const MarketingSection = () => {
             Paper Insights presents
           </div>
           <div className="w-3/4 text-center font-lora text-4xl font-bold">
-            The next step in analyzing complex financial documents
+            The next step in analyzing complex scientific papers
           </div>
         </div>
       </div>
@@ -64,7 +64,7 @@ export const MarketingSection = () => {
         <div className="w-full text-center sm:w-1/2 sm:text-left">
           <div className="sm:3/5 mx-auto w-4/5 text-3xl font-bold sm:mx-0">
             Take a peek under the hood and stream insights directly from the
-            algorithm
+            papers
           </div>
           <div className="sm:3/5 mx-auto mt-3 w-4/5 font-lora text-xl sm:mx-0">
             Paper Insights does more than give you the answer. It helps you
@@ -75,10 +75,10 @@ export const MarketingSection = () => {
       <div className="landing-page-gradient-3 mx-auto flex h-max min-h-[500px] w-4/5 flex-col items-center justify-center sm:flex-row">
         <div className="w-full text-center text-center sm:w-1/2 sm:text-left">
           <div className="mx-auto w-4/5 text-3xl font-bold sm:w-4/5 ">
-            Extract meaningful insight from inquiries across multiple documents
+            Extract meaningful insight from inquiries across multiple papers
           </div>
           <div className="mx-auto mt-3 w-4/5 font-lora text-xl sm:w-4/5 ">
-            With the ability to simultaneously examine multiple documents, SEC
+            With the ability to simultaneously examine multiple documents, Paper
             Insights provides comprehensive insights, enabling deep comparisons
             and contrasts.
           </div>
@@ -114,7 +114,7 @@ export const MarketingSection = () => {
             level
           </div>
           <div className="mx-auto mt-3 w-4/5 font-lora text-xl sm:w-4/5 ">
-            Navigate through dense financial information with precision. Our
+            Navigate through dense scientific information with precision. Our
             tool guides you to paragraph-level citations across multiple
             documents, enabling an unmatched level of clarity and comprehension.
           </div>
@@ -152,7 +152,7 @@ export const MarketingSection = () => {
                 provide feedback
               </div>
               <div className="flex items-center justify-around">
-                <a href="mailto:hi@secinsights.ai" target="_blank">
+                <a href="mailto:info@nexmira.ai" target="_blank">
                   <button className="m-4 rounded border bg-llama-indigo px-8 py-2 font-bold text-white hover:bg-[#3B3775]">
                     Get in Touch
                   </button>
@@ -170,7 +170,7 @@ export const MarketingSection = () => {
             >
               Back to Top
             </button>
-            <div>©LlamaIndex Inc. 2023. All rights reserved.</div>
+            <div>Nexmira Solutions. 2024. All rights reserved.</div>
           </div>
         </div>
       </div>

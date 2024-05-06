@@ -1,6 +1,6 @@
 # PaperInsights Frontend
 
-This is PaperInsights, a tool that let's you analyze multiple financial documents, powered by LlamaIndex. [Live URL](https://secinsights.ai/)
+This is Paper Insights, a tool that let's you analyze multiple scientific documents, powered by LlamaIndex. [Live URL](https://paperinsights.nexmira.ai/)
 
 ## Technical Details
 
